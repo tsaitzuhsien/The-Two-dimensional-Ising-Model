@@ -15,9 +15,10 @@ The Ising model simplifies the terms in the Hamiltonian as follows.
 ## Implementation
 I implement the Ising model simulation using the Wolff algorithm.
 The Wolff algorithm updates the spins in a lattice along time.
-In each time step, the Wolff algortihm rums the following procedure, where $T$ is the temperature and $k_\beta$ is the Boltzmann constant.
+In each time step, the Wolff algortihm runs the following procedure, where $T$ is the temperature and $k_\beta$ is the Boltzmann constant.
 1. Construct a cluster $C$.
-2. Select an atom $s$ randomly and put it into the cluster $C$.
+2. Select an atom randomly and put it into the cluster $C$.
+3. Assign the atom in $C$ as $s$.
 3. For each neighbor $s' \in n(s)$ that has the same spin direction as $s$, add $s'$ to $C$ with probability $1 - e^{-2 J / (k_\beta T)}$.
-4. If there is an atom in $C$ that hasn't be selected as $s$, select it as $s$ and go back to step 3.
-5. Flip the spin direction of all atoms that have been in $C$.
+4. If there is an atom in $C$ that hasn't be assigned as $s$, assign it as $s$ and go back to step 4.
+5. Flip the spin direction of all atoms in $C$.
