@@ -2,7 +2,7 @@
 ## Introduction
 The two-dimensional Ising model simulates the spin of atoms on a two-dimensional lattice.
 The spin of an atom is affected by the spins of the other atoms on the lattice.
-An atom flips its spin direction according to how such a flip changes the energy of the lattice.
+An atom flips its spin direction based on how such a flip changes the energy of the lattice.
 The energy of a lattice $L$ is computed according to the Hamiltonian $H$ in the following equation, where $J$ is the interaction strength between atoms, the term $s_i$ denotes the spin direction of an atom $i$, the set $n(i)$ consists of the neighbors of a point $i$ on the lattice, and $f(\cdot, \cdot)$ is the energy between two atoms.
 
 $$H = -J \sum_{i \in L} \sum_{j \in n(i)} f(s_i, s_j)$$
