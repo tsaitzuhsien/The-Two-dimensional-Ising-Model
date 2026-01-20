@@ -3,14 +3,19 @@
 The two-dimensional Ising model simulates the spin of atoms on a two-dimensional lattice.
 The spin of an atom is affected by the spins of the other atoms on the lattice.
 An atom flips its spin direction based on how such a flip changes the energy of the lattice.
-The energy of a lattice $L$ is computed according to the Hamiltonian $H$ in the following equation, where $J$ is the interaction strength between atoms, the term $s_i$ denotes the spin direction of an atom $i$, the set $n(i)$ consists of the neighbors of a point $i$ on the lattice, and $f(\cdot, \cdot)$ is the energy between two atoms.
+The energy of a lattice $L$ is computed according to the Hamiltonian $H$ in the following equation, where the set $n(i)$ consists of the neighbors of a point $i$ on the lattice, the term $J_{i, j}$ is the interaction strength between atom $i$ and atom $j$, the term $s_i$ denotes the spin direction of atom $i$, the function $f(\cdot, \cdot)$ is the energy between two atoms, the term $\mu$ is the magnetic momentum, and $h_i$ is the magnetic field on atom $i$.
 
-$$H = -J \sum_{i \in L} \sum_{j \in n(i)} f(s_i, s_j)$$
+$$H = -\sum_{i \in L} \sum_{j \in n(i)} J_{i, j} f(s_i, s_j) - \mu \sum_{i \in L} h_i s_i$$
 
 The Ising model simplifies the terms in the Hamiltonian as follows.
+* The magnetic field is zero.
+* The interaction strength $J_{i, j}$ is the same across all pairs of atoms.
 * The spin of an atom is either upward (1) or downward (-1).
 * The neighbors of an atom are those adjacent to it.
 * The function $f(s_i, s_j)$ is the product of $s_i$ and $s_j$.
+Under these simplification, the Hamiltonian of the Ising model becomes as follows.
+
+$$H = -J\sum_{i \in L} \sum_{j \in n(i)} s_i s_j$$
 
 ## Implementation
 I implement the Ising model simulation using the Wolff algorithm.
