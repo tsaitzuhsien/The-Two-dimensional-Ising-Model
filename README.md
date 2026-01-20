@@ -8,7 +8,7 @@ The energy of a lattice $L$ is computed according to the Hamiltonian $H$ in the 
 --->
 The energy of a lattice $L$ is computed according to the Hamiltomian $H$ in the follwoing equation, where the meaning of each term is listed in the table below the equation.
 
-$$H = -\sum_{i \in L} \sum_{j \in n(i)} J_{i, j} f(s_i, s_j) - \mu \sum_{i \in L} h_i s_i$$
+$$H = -\sum_{i \in L} \sum_{j \in n(i)} J_{i, j} \times f(s_i, s_j) - \mu \sum_{i \in L} h_i \times s_i$$
 
 | The term | Its meaning |
 | --- | --- |
@@ -20,15 +20,15 @@ $$H = -\sum_{i \in L} \sum_{j \in n(i)} J_{i, j} f(s_i, s_j) - \mu \sum_{i \in L
 | $h_i$ | The magnetic field operating on atom $i$ |
 
 The Ising model simplifies the terms in the Hamiltonian as follows.
-* The magnetic field is zero.
 * The interaction strength $J_{i, j}$ is the same across all pairs of atoms.
-* The spin of an atom is either upward (1) or downward (-1).
 * The neighbors of an atom are those adjacent to it.
+* The spin of an atom is either upward (1) or downward (-1).
 * The function $f(s_i, s_j)$ is the product of $s_i$ and $s_j$.
+* The magnetic field is zero.
 
 Under these simplification, the Hamiltonian of the Ising model becomes as follows.
 
-$$H = -J\sum_{i \in L} \sum_{j \in n(i)} s_i s_j$$
+$$H = -J\sum_{i \in L} \sum_{j \in n(i)} s_i \times s_j$$
 
 ## Implementation
 I implement the Ising model simulation using the Wolff algorithm.
