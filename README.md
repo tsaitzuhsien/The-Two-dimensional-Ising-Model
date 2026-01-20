@@ -34,13 +34,10 @@ $$H(s) = -J\sum_{i \in L} \sum_{j \in n(i)} s_i s_j$$
 According to the Boltzmann distribution, the probability $P(s)$ of the lattice at the state $s$ is as follows. 
 
 $$\begin{aligned}
-a &= b + c \\
-  &= d
+	P(s) & = & \frac{e^{- H(s) / (k_\beta T)}}{Z_\beta} \\
+	Z_\beta  & = & \sum_{s} e^{- H(s) / (k_\beta T)}
 \end{aligned}$$
 
-$$P(s) = \frac{e^{- H(s) / (k_\beta T)}}{Z_\beta}$$
-
-$$Z_\beta = \sum_{s} e^{- H(s) / (k_\beta T)}$$
 
 ## Implementation
 I implement the Ising model simulation using the Wolff algorithm.
