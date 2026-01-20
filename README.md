@@ -10,14 +10,16 @@ The energy of a lattice $L$ is computed according to the Hamiltomian $H$ in the 
 
 $$H = -\sum_{i \in L} \sum_{j \in n(i)} J_{i, j} f(s_i, s_j) - \mu \sum_{i \in L} h_i s_i$$
 
+<div align="center">
 | The term | Its meaning |
 | --- | --- |
 | $n(i)$ | A set consisting of the neighbor of atom $i$ in the lattice |
 | $J_{i, j}$ | The interaction strength between atom $i$ and atom $j$ |
 | $s_i$ | The spin direction of atom $i$ |
-| $f(\cdot, cdot)$ | The energy between two atoms |
+| $f(\cdot, \cdot)$ | The energy between two atoms |
 | $\mu$ | The magnetic moment |
 | $h_i$ | The magnetic field operating on atom $i$ |
+</div>
 
 The Ising model simplifies the terms in the Hamiltonian as follows.
 * The magnetic field is zero.
