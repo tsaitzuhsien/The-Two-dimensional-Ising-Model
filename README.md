@@ -8,7 +8,7 @@ The energy of a lattice $L$ is computed according to the Hamiltonian $H$ in the 
 --->
 The energy of a lattice $L$ is computed according to the Hamiltonian $H$ in the following equation, where the meaning of each term is listed in the table below the equation.
 
-$$H = -\sum_{i \in L} \sum_{j \in n(i)} J_{i, j} \times f(s_i, s_j) - \mu \sum_{i \in L} h_i \times s_i$$
+$$H = -\sum_{i \in L} \sum_{j \in n(i)} J_{i, j} f(s_i, s_j) - \mu \sum_{i \in L} h_i s_i$$
 
 | The term | Its meaning |
 | --- | --- |
@@ -28,7 +28,7 @@ The Ising model simplifies the terms in the Hamiltonian as follows.
 
 Under these simplifications, the Hamiltonian of the Ising model becomes as follows.
 
-$$H = -J\sum_{i \in L} \sum_{j \in n(i)} s_i \times s_j$$
+$$H = -J\sum_{i \in L} \sum_{j \in n(i)} s_i s_j$$
 
 ## Implementation
 I implement the Ising model simulation using the Wolff algorithm.
