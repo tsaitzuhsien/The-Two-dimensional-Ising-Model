@@ -6,7 +6,7 @@ An atom flips its spin direction based on how such a flip changes the energy of 
 <!---
 The energy of a lattice $L$ is computed according to the Hamiltonian $H$ in the following equation, where the set $n(i)$ consists of the neighbors of a point $i$ on the lattice, the term $J_{i, j}$ is the interaction strength between atom $i$ and atom $j$, the term $s_i$ denotes the spin direction of atom $i$, the function $f(\cdot, \cdot)$ is the energy between two atoms, the term $\mu$ is the magnetic momentum, and $h_i$ is the magnetic field on atom $i$.
 --->
-The energy of a lattice $L$ is computed according to the Hamiltomian $H$ in the follwoing equation, where the meaning of each term is listed in the table below the equation.
+The energy of a lattice $L$ is computed according to the Hamiltonian $H$ in the following equation, where the meaning of each term is listed in the table below the equation.
 
 $$H = -\sum_{i \in L} \sum_{j \in n(i)} J_{i, j} \times f(s_i, s_j) - \mu \sum_{i \in L} h_i \times s_i$$
 
@@ -26,14 +26,14 @@ The Ising model simplifies the terms in the Hamiltonian as follows.
 * The function $f(s_i, s_j)$ is the product of $s_i$ and $s_j$.
 * The magnetic field is zero.
 
-Under these simplification, the Hamiltonian of the Ising model becomes as follows.
+Under these simplifications, the Hamiltonian of the Ising model becomes as follows.
 
 $$H = -J\sum_{i \in L} \sum_{j \in n(i)} s_i \times s_j$$
 
 ## Implementation
 I implement the Ising model simulation using the Wolff algorithm.
-The Wolff algorithm updates the spins in a lattice along time.
-In each time step, the Wolff algortihm runs the following procedure, where $T$ is the temperature and $k_\beta$ is the Boltzmann constant.
+The Wolff algorithm updates the spins in a lattice over time.
+In each time step, the Wolff algorithm runs the following procedure, where $T$ is the temperature and $k_\beta$ is the Boltzmann constant.
 1. Construct a cluster $C$.
 2. Select an atom randomly and put it into the cluster $C$.
 3. Assign the atom in $C$ as $s$.
