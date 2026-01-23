@@ -1,8 +1,6 @@
 # The Two-dimensional Ising Model
 ## Introduction
 The two-dimensional Ising model simulates the spin direction of atoms on a two-dimensional lattice.
-The spin direction of atoms worths studying because it reflects the physical properties of objects, including the phase transition, magnetization, and elasticity.
-
 The spin direction of an atom is affected by the spin direction of the other atoms on the lattice.
 An atom flips its spin direction based on how such a flip changes the energy of the lattice.
 The energy of a lattice is computed according to the Hamiltonian $H(s)$ in the following equation, where the meaning of each term is listed in the table below the equation.
